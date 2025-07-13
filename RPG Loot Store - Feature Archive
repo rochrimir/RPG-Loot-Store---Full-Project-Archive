@@ -1,0 +1,137 @@
+# 📚 RPG Loot Store - Feature Archive
+
+This archive documents the current state, logic, and mechanics of the RPG Loot Store project as of July 13, 2025.
+
+---
+
+## 🔧 CORE SYSTEMS
+
+### 🎲 Loot Generation Engine
+
+* Every item generated is based on the following logic:
+
+  * **Rarity** (Common → Unique)
+  * **Primary Stats** (Strength, Dexterity, Constitution, Intelligence, Wisdom, Luck)
+  * **Unique Stats** (e.g., Physical Damage, Critical Hit Chance)
+  * **Buff Stats** (e.g., Life Steal %, Chance to Burn)
+  * **Skill Stats** (e.g., +2 Projectiles, +1 Summon Skeleton)
+  * **Refinement Level** (+0 to +10) that scales non-percentage stats
+
+### 📊 Rarity Tiers and Stat Allocation
+
+| Rarity    | Random Stats | Unique | Buff                                                  | Skill | Bonus Effects                                    |
+| --------- | ------------ | ------ | ----------------------------------------------------- | ----- | ------------------------------------------------ |
+| Common    | 3            | -      | (30% chance of 1 random: unique, buff, or skill @ 3%) | —     | 0.5% chance to roll Unique-tier values (Jackpot) |
+| Uncommon  | 4            | -      | (30% chance of 1 random: unique, buff, or skill @ 3%) | —     | 1% Jackpot chance                                |
+| Rare      | 5            | 1      | (30% chance of 1 buff or skill @ 4%)                  | —     | —                                                |
+| Epic      | 6            | 2      | 1 (30% chance @ 5%)                                   | 1     | —                                                |
+| Legendary | 7            | 3      | 1                                                     | 1     | —                                                |
+| Unique    | 8            | 4      | 2                                                     | 2     | Naming always includes unique name + subtitle    |
+
+### 🔁 Refinement System
+
+* Range: +0 to +10
+* Increases non-percent stats progressively:
+
+  * +1 to +5 = small scaling on one stat
+  * +6 to +9 = multiple stats increase
+  * +10 = all stats increased by 50%
+* Refinement suffix is added to the name (e.g., `Sword of the Assassin +5`)
+
+---
+
+## 🏷️ Item Naming Engine
+
+### 🔄 Dynamic Naming Logic
+
+Item names are generated based on the highest stat and a rarity-based naming structure, which includes:
+
+* **General Descriptors** per rarity (10+ per tier)
+* **Stat-Based Prefixes** (based on dominant primary stat)
+* **Job-Themed Suffixes** (e.g., Of the Mage, Of the Brawler)
+* **Skill/Effect Subtitles** (conditional: if Burn, add 'of Blaze', etc.)
+
+### 🧠 Naming Components Used
+
+* `naming-db.json` (externalized)
+* Naming format weights:
+
+  * \[General] \[Item]
+  * \[General] \[Stat-Based Prefix] \[Item] of \[Effect]
+  * \[Unique Name], the \[Subtitle]
+* Conditional logic ensures:
+
+  * Subtitles only appear if matching effects/skills are present
+  * Jobs only appear in some names to avoid naming fatigue
+
+### 🔥 Skill-to-Subtitle Mapping Examples
+
+* Burn-related → `of Blaze`, `of Inferno`
+* Life Steal → `of Vampirism`, `of Siphon`
+* Projectile buffs → `of Piercing`, `of Shred`
+* Summon skills → `of Conjuration`, `of Manifestation`
+
+---
+
+## 💎 Special Mechanics
+
+### 🎰 Jackpot Mechanic
+
+* **Common** and **Uncommon** have a rare chance to roll **Unique-tier** stat values
+* Visually highlighted in UI (e.g., glow or FX)
+* Purpose: add excitement, make low-tier rolls collectible
+
+### 💬 Pop-up System
+
+* When generating a duplicate item (same name + stats):
+
+  * A small notification appears: `"Added to Collection"`
+
+### 📦 Collection Log (Planned)
+
+* Tracks all items generated per user
+* Allows reprinting of previously generated items
+* Optional integration with account/login system
+
+---
+
+## 🌐 Deployment Info
+
+* GitHub: Public repository for all source files
+* Netlify: Connected for automatic deployment
+* naming-db.json: Must be locally present and accessible at `/naming-db.json`
+* Future: Gelato API will be used for on-demand item printing
+
+---
+
+## 🔜 Next Prioritized Steps
+
+1. [ ] Refine stat scaling per rarity (especially Epic and above)
+2. [ ] Add more skill-stat relationships for naming subtitles
+3. [ ] Implement image-generator integration (PixelVibe, etc.)
+4. [ ] Finalize and polish UI (dark mode, responsive design)
+5. [ ] Enable login system for Collection Log support
+
+---
+
+## ✅ Completed (As of July 13, 2025)
+
+* Loot engine: ✅
+* Naming system: ✅
+* Refinement logic: ✅
+* Dynamic naming based on effects: ✅
+* Netlify deployment: ✅
+* Externalized naming-db.json: ✅
+* Jackpot mechanic: ✅
+* Buff/Skill chance for lower tiers: ✅
+* Job-based naming: ✅
+
+---
+
+## 🧠 Future Optimization Ideas
+
+* Introduce affix pools tied to item types (e.g., bows = projectile stats)
+* Improve duplicate item detection by ID instead of name
+* Separate UI views: Collection, Generator, Storefront
+* Add image thumbnails for loot items (dynamic pixel art)
+* Add Gelato preview mockups before print
