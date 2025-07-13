@@ -1,0 +1,89 @@
+{
+  "rarity_info": [
+    {
+      "rarity_tier": "Common",
+      "general_descriptors": ["Rusted", "Worn", "Simple", "Crude", "Tattered", "Dull", "Chipped", "Makeshift", "Rough", "Basic"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[General] [Item]", 100]],
+      "effect_chance": 0.1
+    },
+    {
+      "rarity_tier": "Uncommon",
+      "general_descriptors": ["Polished", "Refined", "Sturdy", "Balanced", "Tempered", "Hardened", "Well-Forged", "Tuned", "Reliable", "Nimble"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[General] [Item]", 80], ["[General] [Item] of [Effect]", 20]],
+      "effect_chance": 0.3
+    },
+    {
+      "rarity_tier": "Rare",
+      "general_descriptors": ["Shining", "Majestic", "Powerful", "Honed", "Runed", "Enchanted", "Crackling", "Fierce", "Vicious", "Precise"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[General] [Item] of [Effect]", 60], ["[Stat Descriptor] [Item] [Job Suffix]", 40]],
+      "effect_chance": 0.5
+    },
+    {
+      "rarity_tier": "Epic",
+      "general_descriptors": ["Radiant", "Exalted", "Dominant", "Spellforged", "Heroic", "Corrupted", "Warped", "Arcane", "Piercing", "Titanic"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[General] [Item] of [Effect]", 50], ["[Stat Descriptor] [Item] [Job Suffix]", 50]],
+      "effect_chance": 0.7
+    },
+    {
+      "rarity_tier": "Legendary",
+      "general_descriptors": ["Eternal", "Unstoppable", "Worldforged", "Titanwrought", "Dreambound", "Heavenforged", "Doomcarved", "Eclipsed", "Stormforged", "Cosmic"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[Stat Descriptor] [Item] [Job Suffix]", 60], ["[General] [Item] of [Effect]", 40]],
+      "effect_chance": 0.9
+    },
+    {
+      "rarity_tier": "Unique",
+      "general_descriptors": ["Celestial", "Primordial", "Infinite", "Voidforged", "Starbound", "Cataclysmic", "Timewarped", "Eternalized", "Oneiric", "Netherborn"],
+      "primary_stat_descriptors": [],
+      "job_suffixes": [],
+      "subtitles": [],
+      "naming_format_weights": [["[Stat Descriptor] [Item] [Job Suffix]", 70], ["[General] [Item] of [Effect]", 30]],
+      "effect_chance": 1.0
+    }
+  ],
+
+  "stat_descriptors": {
+    "Strength": ["Brutal", "Heavy", "Colossal", "Mighty", "Crushing", "Blunt", "Overpowering", "Goliath", "Rampaging", "Formidable"],
+    "Dexterity": ["Nimble", "Swift", "Venomous", "Agile", "Fleet", "Acrobatic", "Precise", "Sleek", "Dextrous", "Evasive"],
+    "Constitution": ["Ironclad", "Resolute", "Unyielding", "Stalwart", "Indomitable", "Vanguard", "Enduring", "Adamant", "Tenacious", "Robust"],
+    "Intelligence": ["Mystic", "Arcane", "Thoughtwoven", "Cerebral", "Scholarly", "Profound", "Luminous", "Ingenious", "Lore-bound", "Runic"],
+    "Wisdom": ["Enlightened", "Sage's", "Clairvoyant", "Perceptive", "Spiritual", "Oracle's", "Discerning", "Intuitive", "Serene", "Divine"],
+    "Luck": ["Fated", "Serendipitous", "Gambler's", "Fortuitous", "Charmed", "Auspicious", "Providential", "Jinxed", "Uncanny", "Capricious"]
+  },
+
+  "job_suffixes": {
+    "Strength": ["of the Warrior", "of the Barbarian", "of the Brawler", "of the Champion", "of the Juggernaut", "of the Berserker", "of the Gladiator", "of the Warlord", "of the Crusader", "of the Goliath"],
+    "Dexterity": ["of the Rogue", "of the Assassin", "of the Archer", "of the Acrobat", "of the Thief", "of the Duelist", "of the Ninja", "of the Skirmisher", "of the Spy", "of the Scout"],
+    "Constitution": ["of the Guardian", "of the Paladin", "of the Defender", "of the Stalwart", "of the Bulwark", "of the Protector", "of the Warden", "of the Knight", "of the Veteran", "of the Sentinel"],
+    "Intelligence": ["of the Mage", "of the Scholar", "of the Wizard", "of the Arcanist", "of the Loremaster", "of the Savant", "of the Enchanter", "of the Artificer", "of the Sorcerer", "of the Alchemist"],
+    "Wisdom": ["of the Cleric", "of the Druid", "of the Seer", "of the Monk", "of the Prophet", "of the Hermit", "of the Shaman", "of the Oracle", "of the Sage", "of the Diviner"],
+    "Luck": ["of the Gambler", "of the Fortune-Teller", "of the Adventurer", "of the Opportunist", "of the Vagabond", "of the Charlatan", "of the Swashbuckler", "of the Scoundrel", "of the Daredevil", "of the Wildcard"]
+  },
+
+  "effect_descriptors": {
+    "Burn": ["of Burn", "of Smolder", "of Flames", "of Cinder", "of Blaze", "of Inferno"],
+    "Bleed": ["of Bleed", "of Hemorrhage", "of Gore", "of Laceration", "of Sanguine", "of Mangle"],
+    "Frost": ["of Frost", "of Chill", "of Freeze", "of Glacier", "of Ice", "of Winter"],
+    "Shock": ["of Shock", "of Lightning", "of Static", "of Thunder", "of Current", "of Volt"],
+    "Poison": ["of Poison", "of Venom", "of Toxin", "of Blight", "of Corrosion", "of Virulence"],
+    "Reflection": ["of Reflection", "of Thorns", "of Mirror", "of Retribution", "of Rebound", "of Reprisal"],
+    "Piercing": ["of Piercing", "of Penetration", "of Impale", "of Shred", "of Breach", "of Rupture"],
+    "Summoning": ["of Summoning", "of Conjuration", "of Evocation", "of Manifestation", "of Animation"],
+    "Shadow": ["of Shadows", "of Dark", "of Umbral", "of Gloom", "of Stealth", "of Phantom"],
+    "Vampirism": ["of Vampirism", "of Leech", "of Siphon", "of Drain", "of Bloodlust", "of Sustenance"]
+  }
+}

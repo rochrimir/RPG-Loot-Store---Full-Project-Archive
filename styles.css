@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 0;
+  padding: 0;
+  background-color: #1e1e1e;
+  color: white;
+}
+
+h1 {
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+button {
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin: 20px 0;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+.item {
+  margin: 20px auto;
+  padding: 15px;
+  max-width: 500px;
+  border: 1px solid #444;
+  border-radius: 5px;
+  background-color: #2a2a2a;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.common { color: grey; }
+.uncommon { color: green; }
+.rare { color: blue; }
+.epic { color: purple; }
+.legendary { color: gold; }
+.unique { color: orange; }
+
+.item ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.item ul li {
+  margin: 5px 0;
+}
+
+.hidden {
+  display: none;
+}
+
+#popup {
+  position: fixed;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #333;
+  color: #fff;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
